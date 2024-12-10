@@ -10,7 +10,13 @@ import {
   YAxis,
 } from "recharts";
 
-const PopulationChart = ({ countryInfo }) => {
+import { CountryData } from "../../types";
+
+interface PopulationChartProps {
+  countryInfo: CountryData;
+}
+
+const PopulationChart = ({ countryInfo }: PopulationChartProps) => {
   if (
     !countryInfo ||
     !countryInfo.populationData ||
